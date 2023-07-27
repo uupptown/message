@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Radency</title>
+</head>
+<body>
+   <div class="inputs">
+      <input class="input" type="text" id="inputString" placeholder="Enter S">
+      <input class="input" type="text" id="inputP1" placeholder="Enter P1">
+      <input class="input" type="text" id="inputP2" placeholder="Enter P2">
+      <button class="button" onclick="checkStrings()">CHECK</button>
+      <p class="result" id="result"></p>
+   </div>
+
+  <script>
+    function checkStrings() {
+      const inputS = document.getElementById("inputString").value;
+      const inputP1 = document.getElementById("inputP1").value;
+      const inputP2 = document.getElementById("inputP2").value;
+
+      const resultElement = document.getElementById("result");
+
+      const result = stringChecker(inputS, inputP1, inputP2);
+      resultElement.innerText = result ? "True" : "False";
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
